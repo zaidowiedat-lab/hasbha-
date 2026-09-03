@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>حاسبها | حاسبات وأدوات مجانية</title>
 
 <style>
@@ -15,7 +14,7 @@
 
 body{
   font-family:Tahoma,Arial,sans-serif;
-  background:#f5f7fb;
+  background:#f4f7fb;
   color:#172033;
   line-height:1.7;
 }
@@ -23,30 +22,33 @@ body{
 header{
   background:linear-gradient(135deg,#172554,#2563eb);
   color:white;
-  padding:22px 16px 55px;
+  padding:24px 15px 65px;
   text-align:center;
 }
 
 .logo{
-  font-size:32px;
+  font-size:34px;
   font-weight:900;
 }
 
 .tagline{
-  opacity:.9;
-  margin-top:3px;
   font-size:14px;
+  opacity:.9;
+}
+
+.container{
+  max-width:950px;
+  margin:auto;
+  padding:0 15px;
 }
 
 .hero{
-  max-width:900px;
-  margin:-30px auto 0;
-  padding:0 15px;
+  margin-top:-38px;
 }
 
 .hero-box{
   background:white;
-  border-radius:22px;
+  border-radius:24px;
   padding:25px 18px;
   box-shadow:0 10px 35px rgba(0,0,0,.10);
   text-align:center;
@@ -54,38 +56,31 @@ header{
 
 .hero-box h1{
   font-size:25px;
-  margin-bottom:7px;
+  margin-bottom:5px;
 }
 
 .hero-box p{
-  color:#687386;
+  color:#758095;
   font-size:14px;
-  margin-bottom:20px;
+  margin-bottom:18px;
 }
 
 .search{
   width:100%;
-  padding:16px 18px;
-  border:2px solid #e5e9f2;
+  padding:16px;
+  border:2px solid #e3e8f0;
   border-radius:15px;
   font-size:16px;
   outline:none;
-  direction:rtl;
 }
 
 .search:focus{
   border-color:#2563eb;
 }
 
-main{
-  max-width:900px;
-  margin:25px auto;
-  padding:0 15px;
-}
-
 .section-title{
+  margin:27px 0 14px;
   font-size:21px;
-  margin-bottom:15px;
 }
 
 .cards{
@@ -97,7 +92,7 @@ main{
 .card{
   background:white;
   border-radius:18px;
-  padding:20px 15px;
+  padding:18px 14px;
   box-shadow:0 5px 20px rgba(0,0,0,.06);
   cursor:pointer;
   border:2px solid transparent;
@@ -110,27 +105,26 @@ main{
 }
 
 .card-icon{
-  font-size:31px;
-  margin-bottom:5px;
+  font-size:30px;
 }
 
 .card h3{
-  font-size:17px;
-  margin-bottom:3px;
+  font-size:16px;
+  margin:3px 0;
 }
 
 .card p{
-  color:#7a8495;
+  color:#7b8494;
   font-size:12px;
 }
 
 .calculator{
   display:none;
   background:white;
-  margin-top:25px;
-  border-radius:20px;
+  margin:25px 0;
   padding:22px 17px;
-  box-shadow:0 5px 25px rgba(0,0,0,.07);
+  border-radius:21px;
+  box-shadow:0 6px 25px rgba(0,0,0,.07);
 }
 
 .calculator.active{
@@ -139,40 +133,41 @@ main{
 
 .calculator h2{
   font-size:22px;
-  margin-bottom:5px;
+  margin-bottom:4px;
 }
 
 .description{
-  color:#7a8495;
+  color:#788395;
   font-size:13px;
-  margin-bottom:20px;
+  margin-bottom:18px;
 }
 
 label{
   display:block;
   font-weight:bold;
   font-size:14px;
-  margin:13px 0 6px;
+  margin:12px 0 5px;
 }
 
-input{
+input,select{
   width:100%;
   padding:13px;
-  border:1px solid #dce2ec;
+  border:1px solid #d9e0eb;
   border-radius:11px;
   font-size:16px;
+  background:white;
   outline:none;
 }
 
-input:focus{
+input:focus,select:focus{
   border-color:#2563eb;
 }
 
 button{
   width:100%;
-  margin-top:18px;
-  padding:14px;
   border:0;
+  padding:14px;
+  margin-top:17px;
   border-radius:12px;
   background:#2563eb;
   color:white;
@@ -185,44 +180,70 @@ button:hover{
   background:#1d4ed8;
 }
 
+.back{
+  background:#edf1f6;
+  color:#263247;
+}
+
 .result{
-  margin-top:18px;
-  padding:16px;
   background:#eff6ff;
-  border-radius:13px;
   color:#172554;
-  font-size:15px;
-  min-height:50px;
+  padding:16px;
+  border-radius:13px;
+  margin-top:17px;
+  min-height:55px;
 }
 
 .result strong{
   font-size:21px;
 }
 
-.back{
-  background:#eef2f7;
-  color:#263247;
+.table-wrap{
+  overflow-x:auto;
+  margin-top:18px;
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:12px;
+  min-width:600px;
+}
+
+th,td{
+  padding:8px;
+  border-bottom:1px solid #e5e9f0;
+  text-align:center;
+}
+
+th{
+  background:#eef4ff;
+}
+
+.note{
+  font-size:11px;
+  color:#7c8797;
   margin-top:10px;
+}
+
+.no-results{
+  display:none;
+  background:white;
+  padding:25px;
+  text-align:center;
+  border-radius:16px;
+  color:#788395;
 }
 
 footer{
   text-align:center;
   padding:30px 15px;
-  color:#8a93a3;
+  color:#8a94a5;
   font-size:12px;
 }
 
 .hidden{
   display:none!important;
-}
-
-.no-results{
-  text-align:center;
-  padding:25px;
-  color:#7a8495;
-  background:white;
-  border-radius:16px;
-  display:none;
 }
 
 @media(max-width:600px){
@@ -231,11 +252,11 @@ footer{
   }
 
   .card{
-    padding:17px 12px;
+    padding:16px 11px;
   }
 
   .card h3{
-    font-size:15px;
+    font-size:14px;
   }
 
   .hero-box h1{
@@ -252,396 +273,876 @@ footer{
   <div class="tagline">احسبها صح قبل ما تقرر</div>
 </header>
 
+<div class="container">
+
 <div class="hero">
   <div class="hero-box">
     <h1>حاسباتك اليومية بمكان واحد</h1>
     <p>أدوات مجانية، بسيطة وسريعة بالعربي</p>
 
     <input
-      class="search"
       id="search"
+      class="search"
       type="text"
-      placeholder="🔎 ابحث عن حاسبة... مثال: قرض، راتب، نسبة، عمر"
-      oninput="searchCalculators()"
-    >
+      placeholder="🔎 ابحث عن حاسبة... قرض، راتب، عملات، عمر..."
+      oninput="searchCalculators()">
   </div>
 </div>
 
-<main>
 
-  <h2 class="section-title">الحاسبات</h2>
+<h2 class="section-title">كل الحاسبات</h2>
 
-  <div class="cards" id="cards">
+<div class="cards" id="cards">
 
-    <div class="card" data-name="قرض قسط تمويل بنك فائدة" onclick="openCalculator('loan')">
-      <div class="card-icon">🏦</div>
-      <h3>حاسبة القرض</h3>
-      <p>احسب القسط الشهري وإجمالي السداد</p>
-    </div>
+<div class="card" data-name="قرض قسط تمويل بنك فائدة" onclick="openCalc('loan')">
+<div class="card-icon">🏦</div>
+<h3>القرض والتمويل</h3>
+<p>القسط والفائدة وجدول السداد</p>
+</div>
 
-    <div class="card" data-name="نسبة مئوية نسبة مئوية حساب" onclick="openCalculator('percentage')">
-      <div class="card-icon">📊</div>
-      <h3>حاسبة النسبة</h3>
-      <p>احسب النسبة المئوية بسهولة</p>
-    </div>
+<div class="card" data-name="بطاقة ائتمان فيزا ماستر كارد قسط بطاقة" onclick="openCalc('card')">
+<div class="card-icon">💳</div>
+<h3>بطاقة الائتمان</h3>
+<p>حساب السداد والمدة التقريبية</p>
+</div>
 
-    <div class="card" data-name="راتب دخل راتب شهري خصم" onclick="openCalculator('salary')">
-      <div class="card-icon">💰</div>
-      <h3>حاسبة الراتب</h3>
-      <p>احسب الراتب بعد الخصومات</p>
-    </div>
+<div class="card" data-name="نسبة مئوية نسبة حساب" onclick="openCalc('percentage')">
+<div class="card-icon">📊</div>
+<h3>النسبة المئوية</h3>
+<p>احسب النسبة من أي رقم</p>
+</div>
 
-    <div class="card" data-name="عمر تاريخ ميلاد سنوات" onclick="openCalculator('age')">
-      <div class="card-icon">🎂</div>
-      <h3>حاسبة العمر</h3>
-      <p>احسب عمرك بالسنوات والأشهر والأيام</p>
-    </div>
+<div class="card" data-name="راتب دخل خصم اقتطاع راتب صافي" onclick="openCalc('salary')">
+<div class="card-icon">💰</div>
+<h3>الراتب</h3>
+<p>الراتب الصافي والاقتطاعات</p>
+</div>
 
-  </div>
+<div class="card" data-name="عمر تاريخ ميلاد" onclick="openCalc('age')">
+<div class="card-icon">🎂</div>
+<h3>العمر</h3>
+<p>العمر بالسنوات والأشهر والأيام</p>
+</div>
 
-  <div class="no-results" id="noResults">
-    ما لقينا حاسبة بهذا الاسم 🔎
-  </div>
+<div class="card" data-name="عملات دولار دينار يورو ريال درهم تحويل" onclick="openCalc('currency')">
+<div class="card-icon">💱</div>
+<h3>تحويل العملات</h3>
+<p>حوّل بين العملات</p>
+</div>
 
-  <!-- حاسبة القرض -->
+<div class="card" data-name="خصم تخفيض سعر تنزيل" onclick="openCalc('discount')">
+<div class="card-icon">🏷️</div>
+<h3>الخصم والسعر</h3>
+<p>احسب السعر بعد الخصم</p>
+</div>
 
-  <section class="calculator" id="loan">
+<div class="card" data-name="جمع طرح ضرب قسمة آلة حاسبة حساب" onclick="openCalc('basic')">
+<div class="card-icon">🧮</div>
+<h3>حاسبة الحساب</h3>
+<p>جمع وطرح وضرب وقسمة</p>
+</div>
 
-    <h2>🏦 حاسبة القرض والقسط</h2>
+<div class="card" data-name="زيادة نقصان نسبة ارتفاع انخفاض" onclick="openCalc('change')">
+<div class="card-icon">📈</div>
+<h3>زيادة أو نقصان</h3>
+<p>احسب نسبة التغير</p>
+</div>
 
-    <p class="description">
-      أدخل مبلغ القرض ونسبة الفائدة والمدة لمعرفة القسط التقريبي.
-    </p>
+<div class="card" data-name="ادخار توفير توفير المال مدخرات" onclick="openCalc('saving')">
+<div class="card-icon">🐷</div>
+<h3>حاسبة الادخار</h3>
+<p>اعرف كم ستجمع خلال المدة</p>
+</div>
 
-    <label>مبلغ القرض</label>
-    <input id="loanAmount" type="number" placeholder="مثال: 10000">
+</div>
 
-    <label>نسبة الفائدة السنوية %</label>
-    <input id="loanRate" type="number" step="0.01" placeholder="مثال: 7.25">
-
-    <label>مدة القرض بالأشهر</label>
-    <input id="loanMonths" type="number" placeholder="مثال: 60">
-
-    <button onclick="calculateLoan()">احسب القسط</button>
-
-    <div class="result" id="loanResult">
-      أدخل البيانات واضغط احسب.
-    </div>
-
-    <button class="back" onclick="closeCalculators()">← رجوع للحاسبات</button>
-
-  </section>
-
-
-  <!-- حاسبة النسبة -->
-
-  <section class="calculator" id="percentage">
-
-    <h2>📊 حاسبة النسبة المئوية</h2>
-
-    <p class="description">
-      احسب قيمة النسبة المئوية من أي رقم.
-    </p>
-
-    <label>الرقم</label>
-    <input id="percentNumber" type="number" placeholder="مثال: 500">
-
-    <label>النسبة %</label>
-    <input id="percentValue" type="number" step="0.01" placeholder="مثال: 15">
-
-    <button onclick="calculatePercentage()">احسب النسبة</button>
-
-    <div class="result" id="percentageResult">
-      أدخل البيانات واضغط احسب.
-    </div>
-
-    <button class="back" onclick="closeCalculators()">← رجوع للحاسبات</button>
-
-  </section>
+<div class="no-results" id="noResults">
+ما لقينا حاسبة بهذا الاسم 🔎
+</div>
 
 
-  <!-- حاسبة الراتب -->
+<!-- القرض -->
 
-  <section class="calculator" id="salary">
+<section class="calculator" id="loan">
 
-    <h2>💰 حاسبة الراتب</h2>
+<h2>🏦 حاسبة القرض والتمويل</h2>
+<p class="description">احسب القسط الشهري وإجمالي السداد والفائدة مع جدول تقريبي.</p>
 
-    <p class="description">
-      احسب الراتب المتبقي بعد الخصومات.
-    </p>
+<label>مبلغ القرض</label>
+<input id="loanAmount" type="number" placeholder="مثال: 10000">
 
-    <label>الراتب الإجمالي</label>
-    <input id="grossSalary" type="number" placeholder="مثال: 1000">
+<label>الفائدة السنوية %</label>
+<input id="loanRate" type="number" step="0.01" placeholder="مثال: 7.25">
 
-    <label>إجمالي الخصومات</label>
-    <input id="salaryDeductions" type="number" placeholder="مثال: 250">
+<label>مدة القرض بالأشهر</label>
+<input id="loanMonths" type="number" placeholder="مثال: 60">
 
-    <button onclick="calculateSalary()">احسب الراتب الصافي</button>
+<button onclick="calculateLoan()">احسب القرض</button>
 
-    <div class="result" id="salaryResult">
-      أدخل البيانات واضغط احسب.
-    </div>
+<div class="result" id="loanResult">أدخل البيانات واضغط احسب.</div>
 
-    <button class="back" onclick="closeCalculators()">← رجوع للحاسبات</button>
+<div class="table-wrap">
+<table id="loanTable"></table>
+</div>
 
-  </section>
+<button class="back" onclick="closeCalc()">← رجوع</button>
+
+</section>
 
 
-  <!-- حاسبة العمر -->
+<!-- بطاقة الائتمان -->
 
-  <section class="calculator" id="age">
+<section class="calculator" id="card">
 
-    <h2>🎂 حاسبة العمر</h2>
+<h2>💳 حاسبة بطاقة الائتمان</h2>
+<p class="description">تقدير تقريبي للمدة اللازمة للسداد عند دفع مبلغ ثابت شهريًا.</p>
 
-    <p class="description">
-      أدخل تاريخ ميلادك لمعرفة عمرك.
-    </p>
+<label>المبلغ المستحق</label>
+<input id="cardBalance" type="number" placeholder="مثال: 1000">
 
-    <label>تاريخ الميلاد</label>
-    <input id="birthDate" type="date">
+<label>الفائدة السنوية %</label>
+<input id="cardRate" type="number" step="0.01" placeholder="مثال: 20">
 
-    <button onclick="calculateAge()">احسب العمر</button>
+<label>الدفع الشهري</label>
+<input id="cardPayment" type="number" placeholder="مثال: 100">
 
-    <div class="result" id="ageResult">
-      أدخل تاريخ الميلاد واضغط احسب.
-    </div>
+<button onclick="calculateCard()">احسب</button>
 
-    <button class="back" onclick="closeCalculators()">← رجوع للحاسبات</button>
+<div class="result" id="cardResult">أدخل البيانات واضغط احسب.</div>
 
-  </section>
+<p class="note">النتيجة تقديرية وقد تختلف عن طريقة احتساب البنك للبطاقة والرسوم.</p>
 
-</main>
+<button class="back" onclick="closeCalc()">← رجوع</button>
+
+</section>
+
+
+<!-- النسبة -->
+
+<section class="calculator" id="percentage">
+
+<h2>📊 حاسبة النسبة المئوية</h2>
+<p class="description">احسب قيمة نسبة مئوية من رقم.</p>
+
+<label>الرقم</label>
+<input id="percentNumber" type="number" placeholder="مثال: 500">
+
+<label>النسبة %</label>
+<input id="percentValue" type="number" step="0.01" placeholder="مثال: 15">
+
+<button onclick="calculatePercentage()">احسب</button>
+
+<div class="result" id="percentageResult">أدخل البيانات واضغط احسب.</div>
+
+<button class="back" onclick="closeCalc()">← رجوع</button>
+
+</section>
+
+
+<!-- الراتب -->
+
+<section class="calculator" id="salary">
+
+<h2>💰 حاسبة الراتب</h2>
+<p class="description">احسب راتبك الصافي بعد الخصومات.</p>
+
+<label>الراتب الإجمالي</label>
+<input id="grossSalary" type="number" placeholder="مثال: 1000">
+
+<label>إجمالي الخصومات</label>
+<input id="salaryDeductions" type="number" placeholder="مثال: 250">
+
+<button onclick="calculateSalary()">احسب الصافي</button>
+
+<div class="result" id="salaryResult">أدخل البيانات واضغط احسب.</div>
+
+<button class="back" onclick="closeCalc()">← رجوع</button>
+
+</section>
+
+
+<!-- العمر -->
+
+<section class="calculator" id="age">
+
+<h2>🎂 حاسبة العمر</h2>
+<p class="description">اعرف عمرك بالسنوات والأشهر والأيام.</p>
+
+<label>تاريخ الميلاد</label>
+<input id="birthDate" type="date">
+
+<button onclick="calculateAge()">احسب العمر</button>
+
+<div class="result" id="ageResult">اختر تاريخ الميلاد.</div>
+
+<button class="back" onclick="closeCalc()">← رجوع</button>
+
+</section>
+
+
+<!-- العملات -->
+
+<section class="calculator" id="currency">
+
+<h2>💱 محول العملات</h2>
+<p class="description">حوّل العملات باستخدام أسعار صرف قابلة للتعديل.</p>
+
+<label>المبلغ</label>
+<input id="currencyAmount" type="number" placeholder="مثال: 100">
+
+<label>من</label>
+<select id="currencyFrom">
+<option value="JOD">الدينار الأردني JOD</option>
+<option value="USD">الدولار الأمريكي USD</option>
+<option value="EUR">اليورو EUR</option>
+<option value="SAR">الريال السعودي SAR</option>
+<option value="AED">الدرهم الإماراتي AED</option>
+<option value="QAR">الريال القطري QAR</option>
+<option value="KWD">الدينار الكويتي KWD</option>
+<option value="GBP">الجنيه الإسترليني GBP</option>
+</select>
+
+<label>إلى</label>
+<select id="currencyTo">
+<option value="USD">الدولار الأمريكي USD</option>
+<option value="JOD">الدينار الأردني JOD</option>
+<option value="EUR">اليورو EUR</option>
+<option value="SAR">الريال السعودي SAR</option>
+<option value="AED">الدرهم الإماراتي AED</option>
+<option value="QAR">الريال القطري QAR</option>
+<option value="KWD">الدينار الكويتي KWD</option>
+<option value="GBP">الجنيه الإسترليني GBP</option>
+</select>
+
+<button onclick="convertCurrency()">تحويل</button>
+
+<div class="result" id="currencyResult">أدخل المبلغ واختر العملات.</div>
+
+<p class="note">
+أسعار الصرف داخل الحاسبة تقريبية وليست أسعارًا لحظية.
+</p>
+
+<button class="back" onclick="closeCalc()">← رجوع</button>
+
+</section>
+
+
+<!-- الخصم -->
+
+<section class="calculator" id="discount">
+
+<h2>🏷️ حاسبة الخصم</h2>
+<p class="description">اعرف قيمة الخصم والسعر النهائي.</p>
+
+<label>السعر الأصلي</label>
+<input id="originalPrice" type="number" placeholder="مثال: 100">
+
+<label>نسبة الخصم %</label>
+<input id="discountPercent" type="number" placeholder="مثال: 20">
+
+<button onclick="calculateDiscount()">احسب السعر</button>
+
+<div class="result" id="discountResult">أدخل البيانات واضغط احسب.</div>
+
+<button class="back" onclick="closeCalc()">← رجوع</button>
+
+</section>
+
+
+<!-- الحساب -->
+
+<section class="calculator" id="basic">
+
+<h2>🧮 حاسبة الحساب</h2>
+<p class="description">إجراء العمليات الحسابية الأساسية.</p>
+
+<label>الرقم الأول</label>
+<input id="basicA" type="number" placeholder="مثال: 100">
+
+<label>العملية</label>
+<select id="basicOperation">
+<option value="+">جمع +</option>
+<option value="-">طرح −</option>
+<option value="*">ضرب ×</option>
+<option value="/">قسمة ÷</option>
+</select>
+
+<label>الرقم الثاني</label>
+<input id="basicB" type="number" placeholder="مثال: 25">
+
+<button onclick="calculateBasic()">احسب</button>
+
+<div class="result" id="basicResult">أدخل الأرقام واضغط احسب.</div>
+
+<button class="back" onclick="closeCalc()">← رجوع</button>
+
+</section>
+
+
+<!-- التغير -->
+
+<section class="calculator" id="change">
+
+<h2>📈 حاسبة الزيادة والنقصان</h2>
+<p class="description">احسب نسبة التغير بين رقمين.</p>
+
+<label>القيمة القديمة</label>
+<input id="oldValue" type="number" placeholder="مثال: 100">
+
+<label>القيمة الجديدة</label>
+<input id="newValue" type="number" placeholder="مثال: 120">
+
+<button onclick="calculateChange()">احسب التغير</button>
+
+<div class="result" id="changeResult">أدخل القيم واضغط احسب.</div>
+
+<button class="back" onclick="closeCalc()">← رجوع</button>
+
+</section>
+
+
+<!-- الادخار -->
+
+<section class="calculator" id="saving">
+
+<h2>🐷 حاسبة الادخار</h2>
+<p class="description">احسب المبلغ الذي ستجمعه من خلال ادخار مبلغ شهري.</p>
+
+<label>المبلغ الموجود حاليًا</label>
+<input id="savingStart" type="number" placeholder="مثال: 500">
+
+<label>المبلغ الذي ستدخره شهريًا</label>
+<input id="savingMonthly" type="number" placeholder="مثال: 100">
+
+<label>عدد الأشهر</label>
+<input id="savingMonths" type="number" placeholder="مثال: 12">
+
+<button onclick="calculateSaving()">احسب الادخار</button>
+
+<div class="result" id="savingResult">أدخل البيانات واضغط احسب.</div>
+
+<button class="back" onclick="closeCalc()">← رجوع</button>
+
+</section>
+
+</div>
+
 
 <footer>
-  © 2026 حاسبها — حاسبات مجانية بالعربي
+© 2026 حاسبها — حاسبات مجانية بالعربي
 </footer>
 
 
 <script>
 
-function openCalculator(id){
+/* فتح الحاسبة */
 
-  document.querySelectorAll('.calculator').forEach(function(calculator){
-    calculator.classList.remove('active');
-  });
+function openCalc(id){
 
-  document.getElementById(id).classList.add('active');
+document.querySelectorAll('.calculator').forEach(function(x){
+x.classList.remove('active');
+});
 
-  document.getElementById(id).scrollIntoView({
-    behavior:'smooth',
-    block:'start'
-  });
+document.getElementById(id).classList.add('active');
+
+document.getElementById(id).scrollIntoView({
+behavior:'smooth',
+block:'start'
+});
+
 }
 
 
-function closeCalculators(){
+/* إغلاق الحاسبات */
 
-  document.querySelectorAll('.calculator').forEach(function(calculator){
-    calculator.classList.remove('active');
-  });
+function closeCalc(){
 
-  window.scrollTo({
-    top:0,
-    behavior:'smooth'
-  });
+document.querySelectorAll('.calculator').forEach(function(x){
+x.classList.remove('active');
+});
+
+window.scrollTo({
+top:0,
+behavior:'smooth'
+});
+
 }
 
+
+/* البحث */
 
 function searchCalculators(){
 
-  const search = document.getElementById('search').value.trim().toLowerCase();
+let text=document.getElementById('search').value.trim().toLowerCase();
 
-  const cards = document.querySelectorAll('.card');
-  let found = false;
+let cards=document.querySelectorAll('.card');
 
-  cards.forEach(function(card){
+let found=false;
 
-    const name = card.getAttribute('data-name').toLowerCase();
+cards.forEach(function(card){
 
-    if(search === '' || name.includes(search)){
-      card.classList.remove('hidden');
-      found = true;
-    }else{
-      card.classList.add('hidden');
-    }
+let name=card.getAttribute('data-name').toLowerCase();
 
-  });
+if(text==='' || name.includes(text)){
 
-  document.getElementById('noResults').style.display =
-    found ? 'none' : 'block';
+card.classList.remove('hidden');
+found=true;
 
-  if(search === ''){
-    closeCalculators();
-    return;
-  }
+}else{
 
-  if(search.includes('قرض') || search.includes('قسط') || search.includes('تمويل')){
-    openCalculator('loan');
-  }
+card.classList.add('hidden');
 
-  else if(search.includes('نسبة') || search.includes('%')){
-    openCalculator('percentage');
-  }
-
-  else if(search.includes('راتب') || search.includes('دخل')){
-    openCalculator('salary');
-  }
-
-  else if(search.includes('عمر') || search.includes('ميلاد')){
-    openCalculator('age');
-  }
 }
 
+});
+
+document.getElementById('noResults').style.display=
+found?'none':'block';
+
+if(text===''){
+closeCalc();
+return;
+}
+
+if(text.includes('قرض') || text.includes('قسط') || text.includes('تمويل')){
+openCalc('loan');
+}
+
+else if(text.includes('بطاق')){
+openCalc('card');
+}
+
+else if(text.includes('نسبة')){
+openCalc('percentage');
+}
+
+else if(text.includes('راتب') || text.includes('دخل')){
+openCalc('salary');
+}
+
+else if(text.includes('عمر') || text.includes('ميلاد')){
+openCalc('age');
+}
+
+else if(text.includes('عمل') || text.includes('دولار') || text.includes('دينار') || text.includes('يورو')){
+openCalc('currency');
+}
+
+else if(text.includes('خصم') || text.includes('سعر')){
+openCalc('discount');
+}
+
+else if(text.includes('جمع') || text.includes('طرح') || text.includes('ضرب') || text.includes('قسمة')){
+openCalc('basic');
+}
+
+else if(text.includes('زيادة') || text.includes('نقصان') || text.includes('تغير')){
+openCalc('change');
+}
+
+else if(text.includes('ادخار') || text.includes('توفير')){
+openCalc('saving');
+}
+
+}
+
+
+/* القرض */
 
 function calculateLoan(){
 
-  const P = Number(document.getElementById('loanAmount').value);
-  const annual = Number(document.getElementById('loanRate').value);
-  const months = Number(document.getElementById('loanMonths').value);
+let P=Number(document.getElementById('loanAmount').value);
+let annual=Number(document.getElementById('loanRate').value);
+let months=Number(document.getElementById('loanMonths').value);
 
-  const result = document.getElementById('loanResult');
+let result=document.getElementById('loanResult');
 
-  if(P <= 0 || annual < 0 || months <= 0){
-    result.innerHTML = '⚠️ تأكد من إدخال البيانات بشكل صحيح.';
-    return;
-  }
+if(P<=0 || annual<0 || months<=0){
 
-  const r = annual / 100 / 12;
+result.innerHTML='⚠️ تأكد من إدخال البيانات بشكل صحيح.';
+return;
 
-  let payment;
-
-  if(r === 0){
-    payment = P / months;
-  }else{
-    payment =
-      P * r * Math.pow(1+r,months) /
-      (Math.pow(1+r,months)-1);
-  }
-
-  const total = payment * months;
-  const interest = total - P;
-
-  result.innerHTML =
-    'القسط الشهري التقريبي:<br>' +
-    '<strong>' + payment.toFixed(2) + ' دينار</strong><br><br>' +
-    'إجمالي السداد: ' + total.toFixed(2) + ' دينار<br>' +
-    'إجمالي الفائدة: ' + interest.toFixed(2) + ' دينار';
 }
 
+let r=annual/100/12;
+
+let payment;
+
+if(r===0){
+
+payment=P/months;
+
+}else{
+
+payment=P*r*Math.pow(1+r,months)/
+(Math.pow(1+r,months)-1);
+
+}
+
+let total=payment*months;
+let interest=total-P;
+
+result.innerHTML=
+'القسط الشهري:<br><strong>'+
+payment.toFixed(2)+' دينار</strong><br><br>'+
+'إجمالي السداد: '+total.toFixed(2)+' دينار<br>'+
+'إجمالي الفائدة: '+interest.toFixed(2)+' دينار';
+
+let balance=P;
+
+let html=
+'<tr><th>القسط</th><th>القسط الشهري</th><th>الفائدة</th><th>من أصل القرض</th><th>المتبقي</th></tr>';
+
+let rows=Math.min(months,120);
+
+for(let i=1;i<=rows;i++){
+
+let interestPart=balance*r;
+let principalPart=payment-interestPart;
+
+balance-=principalPart;
+
+if(balance<0) balance=0;
+
+html+=
+'<tr>'+
+'<td>'+i+'</td>'+
+'<td>'+payment.toFixed(2)+'</td>'+
+'<td>'+interestPart.toFixed(2)+'</td>'+
+'<td>'+principalPart.toFixed(2)+'</td>'+
+'<td>'+balance.toFixed(2)+'</td>'+
+'</tr>';
+
+}
+
+if(months>120){
+
+html+=
+'<tr><td colspan="5">يتم عرض أول 120 قسط فقط.</td></tr>';
+
+}
+
+document.getElementById('loanTable').innerHTML=html;
+
+}
+
+
+/* بطاقة الائتمان */
+
+function calculateCard(){
+
+let balance=Number(document.getElementById('cardBalance').value);
+let annual=Number(document.getElementById('cardRate').value);
+let payment=Number(document.getElementById('cardPayment').value);
+
+let result=document.getElementById('cardResult');
+
+if(balance<=0 || annual<0 || payment<=0){
+
+result.innerHTML='⚠️ تأكد من إدخال البيانات بشكل صحيح.';
+return;
+
+}
+
+let monthlyRate=annual/100/12;
+
+if(monthlyRate>0 && payment<=balance*monthlyRate){
+
+result.innerHTML=
+'⚠️ الدفعة الشهرية لا تكفي لتغطية الفائدة الشهرية.';
+return;
+
+}
+
+let current=balance;
+let months=0;
+let interestTotal=0;
+
+while(current>0 && months<1200){
+
+let interest=current*monthlyRate;
+interestTotal+=interest;
+
+current=current+interest-payment;
+
+months++;
+
+}
+
+if(months>=1200){
+
+result.innerHTML='⚠️ المدة طويلة جدًا بهذه الدفعة الشهرية.';
+return;
+
+}
+
+result.innerHTML=
+'المدة التقريبية للسداد:<br>'+
+'<strong>'+months+' شهر</strong><br><br>'+
+'إجمالي الفائدة التقريبية: '+
+interestTotal.toFixed(2)+' دينار';
+
+}
+
+
+/* النسبة */
 
 function calculatePercentage(){
 
-  const number =
-    Number(document.getElementById('percentNumber').value);
+let number=Number(document.getElementById('percentNumber').value);
+let percent=Number(document.getElementById('percentValue').value);
 
-  const percent =
-    Number(document.getElementById('percentValue').value);
+if(number<0 || percent<0){
 
-  const result =
-    document.getElementById('percentageResult');
+document.getElementById('percentageResult').innerHTML=
+'⚠️ تأكد من البيانات.';
+return;
 
-  if(number < 0 || percent < 0){
-    result.innerHTML =
-      '⚠️ تأكد من إدخال البيانات بشكل صحيح.';
-    return;
-  }
-
-  const answer = number * percent / 100;
-
-  result.innerHTML =
-    percent + '% من ' + number + ' تساوي:<br>' +
-    '<strong>' + answer.toFixed(2) + '</strong>';
 }
 
+let answer=number*percent/100;
+
+document.getElementById('percentageResult').innerHTML=
+percent+'% من '+number+' تساوي:<br>'+
+'<strong>'+answer.toFixed(2)+'</strong>';
+
+}
+
+
+/* الراتب */
 
 function calculateSalary(){
 
-  const gross =
-    Number(document.getElementById('grossSalary').value);
+let gross=Number(document.getElementById('grossSalary').value);
+let deductions=Number(document.getElementById('salaryDeductions').value);
 
-  const deductions =
-    Number(document.getElementById('salaryDeductions').value);
+if(gross<0 || deductions<0 || deductions>gross){
 
-  const result =
-    document.getElementById('salaryResult');
+document.getElementById('salaryResult').innerHTML=
+'⚠️ تأكد من أن الخصومات لا تتجاوز الراتب.';
+return;
 
-  if(gross < 0 || deductions < 0 || deductions > gross){
+}
 
-    result.innerHTML =
-      '⚠️ تأكد من أن الخصومات لا تتجاوز الراتب.';
+let net=gross-deductions;
 
-    return;
-  }
+let percent=gross===0?0:(deductions/gross)*100;
 
-  const net = gross - deductions;
+document.getElementById('salaryResult').innerHTML=
+'الراتب الصافي:<br>'+
+'<strong>'+net.toFixed(2)+' دينار</strong><br><br>'+
+'الخصومات: '+deductions.toFixed(2)+' دينار<br>'+
+'نسبة الخصومات: '+percent.toFixed(2)+'%';
 
-  result.innerHTML =
-    'الراتب الصافي:<br>' +
-    '<strong>' + net.toFixed(2) + ' دينار</strong><br><br>' +
-    'الخصومات: ' + deductions.toFixed(2) + ' دينار';
 }
 
 
+/* العمر */
+
 function calculateAge(){
 
-  const birth =
-    document.getElementById('birthDate').value;
+let value=document.getElementById('birthDate').value;
 
-  const result =
-    document.getElementById('ageResult');
+let result=document.getElementById('ageResult');
 
-  if(!birth){
+if(!value){
 
-    result.innerHTML =
-      '⚠️ اختر تاريخ الميلاد أولاً.';
+result.innerHTML='⚠️ اختر تاريخ الميلاد أولًا.';
+return;
 
-    return;
-  }
+}
 
-  const birthDate = new Date(birth);
-  const today = new Date();
+let birth=new Date(value+'T00:00:00');
+let today=new Date();
 
-  if(birthDate > today){
+if(birth>today){
 
-    result.innerHTML =
-      '⚠️ تاريخ الميلاد لا يمكن أن يكون في المستقبل.';
+result.innerHTML='⚠️ تاريخ الميلاد لا يمكن أن يكون في المستقبل.';
+return;
 
-    return;
-  }
+}
 
-  let years =
-    today.getFullYear() - birthDate.getFullYear();
+let years=today.getFullYear()-birth.getFullYear();
+let months=today.getMonth()-birth.getMonth();
+let days=today.getDate()-birth.getDate();
 
-  let months =
-    today.getMonth() - birthDate.getMonth();
+if(days<0){
 
-  let days =
-    today.getDate() - birthDate.getDate();
+months--;
 
-  if(days < 0){
+let previous=new Date(
+today.getFullYear(),
+today.getMonth(),
+0
+);
 
-    months--;
+days+=previous.getDate();
 
-    const previousMonth =
-      new Date(
-        today.getFullYear(),
-        today.getMonth(),
-        0
-      );
+}
 
-    days += previousMonth.getDate();
-  }
+if(months<0){
 
-  if(months < 0){
+years--;
+months+=12;
 
-    years--;
-    months += 12;
-  }
+}
 
-  result.innerHTML =
-    'عمرك هو:<br>' +
-    '<strong>' + years + ' سنة</strong><br>' +
-    months + ' شهر و ' + days + ' يوم';
+result.innerHTML=
+'عمرك هو:<br>'+
+'<strong>'+years+' سنة</strong><br>'+
+months+' شهر و '+days+' يوم';
+
+}
+
+
+/* أسعار العملات التقريبية */
+
+const rates={
+JOD:1,
+USD:1.410,
+EUR:1.515,
+SAR:5.29,
+AED:5.18,
+QAR:5.13,
+KWD:0.433,
+GBP:1.08
+};
+
+
+/* العملات */
+
+function convertCurrency(){
+
+let amount=Number(document.getElementById('currencyAmount').value);
+let from=document.getElementById('currencyFrom').value;
+let to=document.getElementById('currencyTo').value;
+
+if(amount<0){
+
+document.getElementById('currencyResult').innerHTML=
+'⚠️ أدخل مبلغًا صحيحًا.';
+return;
+
+}
+
+let jodValue=amount/rates[from];
+let converted=jodValue*rates[to];
+
+document.getElementById('currencyResult').innerHTML=
+amount.toFixed(2)+' '+from+' تساوي تقريبًا:<br>'+
+'<strong>'+converted.toFixed(2)+' '+to+'</strong>';
+
+}
+
+
+/* الخصم */
+
+function calculateDiscount(){
+
+let price=Number(document.getElementById('originalPrice').value);
+let percent=Number(document.getElementById('discountPercent').value);
+
+if(price<0 || percent<0){
+
+document.getElementById('discountResult').innerHTML=
+'⚠️ تأكد من البيانات.';
+return;
+
+}
+
+let discount=price*percent/100;
+let finalPrice=price-discount;
+
+document.getElementById('discountResult').innerHTML=
+'قيمة الخصم:<br>'+
+'<strong>'+discount.toFixed(2)+'</strong><br><br>'+
+'السعر بعد الخصم:<br>'+
+'<strong>'+finalPrice.toFixed(2)+'</strong>';
+
+}
+
+
+/* الحساب */
+
+function calculateBasic(){
+
+let a=Number(document.getElementById('basicA').value);
+let b=Number(document.getElementById('basicB').value);
+let op=document.getElementById('basicOperation').value;
+
+let answer;
+
+if(op==='+') answer=a+b;
+if(op==='-') answer=a-b;
+if(op==='*') answer=a*b;
+
+if(op==='/' && b===0){
+
+document.getElementById('basicResult').innerHTML=
+'⚠️ لا يمكن القسمة على صفر.';
+return;
+
+}
+
+if(op==='/') answer=a/b;
+
+document.getElementById('basicResult').innerHTML=
+'النتيجة:<br><strong>'+answer+'</strong>';
+
+}
+
+
+/* نسبة التغير */
+
+function calculateChange(){
+
+let oldValue=Number(document.getElementById('oldValue').value);
+let newValue=Number(document.getElementById('newValue').value);
+
+if(oldValue===0){
+
+document.getElementById('changeResult').innerHTML=
+'⚠️ القيمة القديمة لا يمكن أن تكون صفرًا.';
+return;
+
+}
+
+let change=((newValue-oldValue)/Math.abs(oldValue))*100;
+
+let word=change>=0?'زيادة':'نقصان';
+
+document.getElementById('changeResult').innerHTML=
+'نسبة التغير:<br>'+
+'<strong>'+Math.abs(change).toFixed(2)+'%</strong><br><br>'+
+'النتيجة: '+word;
+
+}
+
+
+/* الادخار */
+
+function calculateSaving(){
+
+let start=Number(document.getElementById('savingStart').value);
+let monthly=Number(document.getElementById('savingMonthly').value);
+let months=Number(document.getElementById('savingMonths').value);
+
+if(start<0 || monthly<0 || months<=0){
+
+document.getElementById('savingResult').innerHTML=
+'⚠️ تأكد من البيانات.';
+return;
+
+}
+
+let total=start+(monthly*months);
+
+document.getElementById('savingResult').innerHTML=
+'المبلغ المتوقع جمعه:<br>'+
+'<strong>'+total.toFixed(2)+' دينار</strong><br><br>'+
+'إجمالي الإيداعات الشهرية: '+
+(monthly*months).toFixed(2)+' دينار';
+
 }
 
 </script>
