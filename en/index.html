@@ -1,0 +1,1087 @@
+<!DOCTYPE html><html lang="en" dir="ltr">
+<head><meta charset="UTF-8"><title>Hasbha | Free Loan, Salary, Currency & Percentage Calculators</title><meta name="description" content="Hasbha is a free online calculator website. Calculate loans, monthly payments, credit cards, salaries, percentages, age, currencies, discounts, savings and more."><meta name="keywords" content="loan calculator, monthly payment calculator, finance calculator, salary calculator, percentage calculator, age calculator, currency converter, discount calculator, savings calculator, credit card calculator"><meta name="robots" content="index, follow"><link rel="canonical" href="https://zaidowiedat-lab.github.io/hasbha-/en/"><link rel="alternate" hreflang="ar" href="https://zaidowiedat-lab.github.io/hasbha-/">
+<link rel="alternate" hreflang="en" href="https://zaidowiedat-lab.github.io/hasbha-/en/">
+<link rel="alternate" hreflang="x-default" href="https://zaidowiedat-lab.github.io/hasbha-/"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta property="og:type" content="website">
+<meta property="og:title" content="Hasbha | Free Online Calculators">
+<meta property="og:description" content="Free calculators for loans, salaries, percentages, currencies, discounts, age and savings.">
+<meta property="og:url" content="https://zaidowiedat-lab.github.io/hasbha-/en/">
+<meta property="og:site_name" content="Hasbha"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Hasbha",
+  "alternateName": "حاسبها",
+  "url": "https://zaidowiedat-lab.github.io/hasbha-/en/",
+  "description": "Free online calculators for loans, salaries, percentages, currencies, discounts, age, credit cards and savings.",
+  "inLanguage": "en"
+}
+</script><style>
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+body{
+font-family:Arial,Tahoma,sans-serif;
+background:#f4f7fb;
+color:#172033;
+line-height:1.7;
+}
+
+header{
+background:linear-gradient(135deg,#172554,#2563eb);
+color:white;
+padding:24px 15px 65px;
+text-align:center;
+}
+
+.logo{
+font-size:34px;
+font-weight:900;
+}
+
+.tagline{
+font-size:14px;
+opacity:.9;
+}
+
+.container{
+max-width:950px;
+margin:auto;
+padding:0 15px;
+}
+
+.hero{
+margin-top:-38px;
+}
+
+.hero-box{
+background:white;
+border-radius:24px;
+padding:25px 18px;
+box-shadow:0 10px 35px rgba(0,0,0,.10);
+text-align:center;
+}
+
+.hero-box h1{
+font-size:25px;
+margin-bottom:5px;
+}
+
+.hero-box p{
+color:#758095;
+font-size:14px;
+margin-bottom:18px;
+}
+
+.search{
+width:100%;
+padding:16px;
+border:2px solid #e3e8f0;
+border-radius:15px;
+font-size:16px;
+outline:none;
+}
+
+.search:focus{
+border-color:#2563eb;
+}
+
+.section-title{
+margin:27px 0 14px;
+font-size:21px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:13px;
+}
+
+.card{
+background:white;
+border-radius:18px;
+padding:18px 14px;
+box-shadow:0 5px 20px rgba(0,0,0,.06);
+cursor:pointer;
+border:2px solid transparent;
+transition:.2s;
+}
+
+.card:hover{
+border-color:#2563eb;
+transform:translateY(-2px);
+}
+
+.card-icon{
+font-size:30px;
+}
+
+.card h3{
+font-size:16px;
+margin:3px 0;
+}
+
+.card p{
+color:#7b8494;
+font-size:12px;
+}
+
+.calculator{
+display:none;
+background:white;
+margin:25px 0;
+padding:22px 17px;
+border-radius:21px;
+box-shadow:0 6px 25px rgba(0,0,0,.07);
+}
+
+.calculator.active{
+display:block;
+}
+
+.calculator h2{
+font-size:22px;
+margin-bottom:4px;
+}
+
+.description{
+color:#788395;
+font-size:13px;
+margin-bottom:18px;
+}
+
+label{
+display:block;
+font-weight:bold;
+font-size:14px;
+margin:12px 0 5px;
+}
+
+input,select{
+width:100%;
+padding:13px;
+border:1px solid #d9e0eb;
+border-radius:11px;
+font-size:16px;
+background:white;
+outline:none;
+}
+
+input:focus,select:focus{
+border-color:#2563eb;
+}
+
+button{
+width:100%;
+border:0;
+padding:14px;
+margin-top:17px;
+border-radius:12px;
+background:#2563eb;
+color:white;
+font-size:16px;
+font-weight:bold;
+cursor:pointer;
+}
+
+button:hover{
+background:#1d4ed8;
+}
+
+.back{
+background:#edf1f6;
+color:#263247;
+}
+
+.result{
+background:#eff6ff;
+color:#172554;
+padding:16px;
+border-radius:13px;
+margin-top:17px;
+min-height:55px;
+}
+
+.result strong{
+font-size:21px;
+}
+
+.table-wrap{
+overflow-x:auto;
+margin-top:18px;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+font-size:12px;
+min-width:600px;
+}
+
+th,td{
+padding:8px;
+border-bottom:1px solid #e5e9f0;
+text-align:center;
+}
+
+th{
+background:#eef4ff;
+}
+
+.note{
+font-size:11px;
+color:#7c8797;
+margin-top:10px;
+}
+
+.no-results{
+display:none;
+background:white;
+padding:25px;
+text-align:center;
+border-radius:16px;
+color:#788395;
+}
+
+.seo-content{
+background:white;
+padding:22px 18px;
+margin:25px 0;
+border-radius:21px;
+box-shadow:0 6px 25px rgba(0,0,0,.06);
+}
+
+.seo-content h2{
+font-size:22px;
+margin-bottom:12px;
+}
+
+.seo-content h3{
+font-size:17px;
+margin-top:18px;
+margin-bottom:5px;
+}
+
+.seo-content p{
+font-size:14px;
+color:#566174;
+}
+
+footer{
+text-align:center;
+padding:30px 15px;
+color:#8a94a5;
+font-size:12px;
+}
+
+.hidden{
+display:none!important;
+}
+
+@media(max-width:600px){
+
+.cards{
+grid-template-columns:1fr 1fr;
+}
+
+.card{
+padding:16px 11px;
+}
+
+.card h3{
+font-size:14px;
+}
+
+.hero-box h1{
+font-size:22px;
+}
+
+}
+
+</style></head><body><header><div class="logo">Hasbha</div><div class="tagline">Calculate it right before you decide</div></header><div class="container"><div class="hero"><div class="hero-box"><h1>Free Online Calculators in One Place</h1><p>Simple, fast and free calculators for everyday use.</p><input
+id="search"
+class="search"
+type="text"
+placeholder="🔎 Search for a calculator... loan, salary, currency, age..."
+oninput="searchCalculators()">
+
+</div></div><h2 class="section-title">All Calculators</h2><div class="cards" id="cards"><div class="card" data-name="loan payment finance bank interest mortgage" onclick="openCalc('loan')"><div class="card-icon">🏦</div><h3>Loan & Finance</h3><p>Monthly payment, interest and repayment schedule</p></div><div class="card" data-name="credit card visa mastercard payment balance interest" onclick="openCalc('card')"><div class="card-icon">💳</div><h3>Credit Card</h3><p>Estimate repayment time and interest</p></div><div class="card" data-name="percentage percent calculation" onclick="openCalc('percentage')"><div class="card-icon">📊</div><h3>Percentage</h3><p>Calculate a percentage of any number</p></div><div class="card" data-name="salary income deductions net salary" onclick="openCalc('salary')"><div class="card-icon">💰</div><h3>Salary</h3><p>Calculate your net salary after deductions</p></div><div class="card" data-name="age birthday date of birth" onclick="openCalc('age')"><div class="card-icon">🎂</div><h3>Age Calculator</h3><p>Calculate age in years, months and days</p></div><div class="card" data-name="currency dollar euro dinar riyal dirham converter exchange" onclick="openCalc('currency')"><div class="card-icon">💱</div><h3>Currency Converter</h3><p>Convert between different currencies</p></div><div class="card" data-name="discount sale price reduction" onclick="openCalc('discount')"><div class="card-icon">🏷️</div><h3>Discount Calculator</h3><p>Calculate the final price after discount</p></div><div class="card" data-name="addition subtraction multiplication division calculator math" onclick="openCalc('basic')"><div class="card-icon">🧮</div><h3>Basic Calculator</h3><p>Add, subtract, multiply and divide</p></div><div class="card" data-name="increase decrease percentage change growth" onclick="openCalc('change')"><div class="card-icon">📈</div><h3>Percentage Change</h3><p>Calculate percentage increase or decrease</p></div><div class="card" data-name="saving savings money saving plan" onclick="openCalc('saving')"><div class="card-icon">🐷</div><h3>Savings Calculator</h3><p>Calculate how much you can save over time</p></div></div><div class="no-results" id="noResults">No calculator found 🔎
+
+</div><!-- LOAN --><section class="calculator" id="loan"><h2>🏦 Loan & Finance Calculator</h2><p class="description">
+Calculate monthly loan payments, total repayment, total interest and an estimated repayment schedule.
+</p><label>Loan Amount</label>
+<input id="loanAmount" type="number" placeholder="Example: 10000">
+
+<label>Annual Interest Rate %</label>
+<input id="loanRate" type="number" step="0.01" placeholder="Example: 7.25">
+
+<label>Loan Term in Months</label>
+<input id="loanMonths" type="number" placeholder="Example: 60">
+
+<button onclick="calculateLoan()">Calculate Loan</button>
+
+<div class="result" id="loanResult">
+Enter the information and click calculate.
+</div><div class="table-wrap"><table id="loanTable"></table></div><button class="back" onclick="closeCalc()">← Back</button>
+
+</section><!-- CREDIT CARD --><section class="calculator" id="card"><h2>💳 Credit Card Calculator</h2><p class="description">
+Estimate how long it may take to pay off a credit card balance when making a fixed monthly payment.
+</p><label>Outstanding Balance</label>
+<input id="cardBalance" type="number" placeholder="Example: 1000">
+
+<label>Annual Interest Rate %</label>
+<input id="cardRate" type="number" step="0.01" placeholder="Example: 20">
+
+<label>Monthly Payment</label>
+<input id="cardPayment" type="number" placeholder="Example: 100">
+
+<button onclick="calculateCard()">Calculate</button>
+
+<div class="result" id="cardResult">
+Enter the information and click calculate.
+</div><p class="note">
+The result is an estimate and may differ from the actual bank calculation and fees.
+</p><button class="back" onclick="closeCalc()">← Back</button>
+
+</section><!-- PERCENTAGE --><section class="calculator" id="percentage"><h2>📊 Percentage Calculator</h2><p class="description">
+Calculate a percentage of any number quickly and easily.
+</p><label>Number</label>
+<input id="percentNumber" type="number" placeholder="Example: 500">
+
+<label>Percentage %</label>
+<input id="percentValue" type="number" step="0.01" placeholder="Example: 15">
+
+<button onclick="calculatePercentage()">Calculate</button>
+
+<div class="result" id="percentageResult">
+Enter the information and click calculate.
+</div><button class="back" onclick="closeCalc()">← Back</button>
+
+</section><!-- SALARY --><section class="calculator" id="salary"><h2>💰 Salary Calculator</h2><p class="description">
+Calculate your net salary after deductions and see the percentage of deductions.
+</p><label>Gross Salary</label>
+<input id="grossSalary" type="number" placeholder="Example: 1000">
+
+<label>Total Deductions</label>
+<input id="salaryDeductions" type="number" placeholder="Example: 250">
+
+<button onclick="calculateSalary()">Calculate Net Salary</button>
+
+<div class="result" id="salaryResult">
+Enter the information and click calculate.
+</div><button class="back" onclick="closeCalc()">← Back</button>
+
+</section><!-- AGE --><section class="calculator" id="age"><h2>🎂 Age Calculator</h2><p class="description">
+Calculate your exact age in years, months and days from your date of birth.
+</p><label>Date of Birth</label>
+<input id="birthDate" type="date">
+
+<button onclick="calculateAge()">Calculate Age</button>
+
+<div class="result" id="ageResult">
+Select your date of birth.
+</div><button class="back" onclick="closeCalc()">← Back</button>
+
+</section><!-- CURRENCY --><section class="calculator" id="currency"><h2>💱 Currency Converter</h2><p class="description">
+Convert between major currencies using approximate exchange rates.
+</p><label>Amount</label>
+<input id="currencyAmount" type="number" placeholder="Example: 100">
+
+<label>From</label>
+
+<select id="currencyFrom"><option value="JOD">Jordanian Dinar JOD</option>
+<option value="USD">US Dollar USD</option>
+<option value="EUR">Euro EUR</option>
+<option value="SAR">Saudi Riyal SAR</option>
+<option value="AED">UAE Dirham AED</option>
+<option value="QAR">Qatari Riyal QAR</option>
+<option value="KWD">Kuwaiti Dinar KWD</option>
+<option value="GBP">British Pound GBP</option></select><label>To</label>
+
+<select id="currencyTo"><option value="USD">US Dollar USD</option>
+<option value="JOD">Jordanian Dinar JOD</option>
+<option value="EUR">Euro EUR</option>
+<option value="SAR">Saudi Riyal SAR</option>
+<option value="AED">UAE Dirham AED</option>
+<option value="QAR">Qatari Riyal QAR</option>
+<option value="KWD">Kuwaiti Dinar KWD</option>
+<option value="GBP">British Pound GBP</option></select><button onclick="convertCurrency()">Convert</button>
+
+<div class="result" id="currencyResult">
+Enter the amount and select the currencies.
+</div><p class="note">
+Exchange rates used by this calculator are approximate and are not live rates.
+</p><button class="back" onclick="closeCalc()">← Back</button>
+
+</section><!-- DISCOUNT --><section class="calculator" id="discount"><h2>🏷️ Discount Calculator</h2><p class="description">
+Calculate the discount amount and the final price after discount.
+</p><label>Original Price</label>
+<input id="originalPrice" type="number" placeholder="Example: 100">
+
+<label>Discount Percentage %</label>
+<input id="discountPercent" type="number" placeholder="Example: 20">
+
+<button onclick="calculateDiscount()">Calculate Price</button>
+
+<div class="result" id="discountResult">
+Enter the information and click calculate.
+</div><button class="back" onclick="closeCalc()">← Back</button>
+
+</section><!-- BASIC --><section class="calculator" id="basic"><h2>🧮 Basic Calculator</h2><p class="description">
+Perform basic mathematical operations including addition, subtraction, multiplication and division.
+</p><label>First Number</label>
+<input id="basicA" type="number" placeholder="Example: 100">
+
+<label>Operation</label>
+
+<select id="basicOperation"><option value="+">Addition +</option>
+<option value="-">Subtraction −</option>
+<option value="*">Multiplication ×</option>
+<option value="/">Division ÷</option></select><label>Second Number</label>
+<input id="basicB" type="number" placeholder="Example: 25">
+
+<button onclick="calculateBasic()">Calculate</button>
+
+<div class="result" id="basicResult">
+Enter the numbers and click calculate.
+</div><button class="back" onclick="closeCalc()">← Back</button>
+
+</section><!-- CHANGE --><section class="calculator" id="change"><h2>📈 Percentage Change Calculator</h2><p class="description">
+Calculate the percentage increase or decrease between two values.
+</p><label>Old Value</label>
+<input id="oldValue" type="number" placeholder="Example: 100">
+
+<label>New Value</label>
+<input id="newValue" type="number" placeholder="Example: 120">
+
+<button onclick="calculateChange()">Calculate Change</button>
+
+<div class="result" id="changeResult">
+Enter the values and click calculate.
+</div><button class="back" onclick="closeCalc()">← Back</button>
+
+</section><!-- SAVINGS --><section class="calculator" id="saving"><h2>🐷 Savings Calculator</h2><p class="description">
+Calculate how much money you can accumulate by saving a fixed amount every month.
+</p><label>Current Savings</label>
+<input id="savingStart" type="number" placeholder="Example: 500">
+
+<label>Monthly Savings</label>
+<input id="savingMonthly" type="number" placeholder="Example: 100">
+
+<label>Number of Months</label>
+<input id="savingMonths" type="number" placeholder="Example: 12">
+
+<button onclick="calculateSaving()">Calculate Savings</button>
+
+<div class="result" id="savingResult">
+Enter the information and click calculate.
+</div><button class="back" onclick="closeCalc()">← Back</button>
+
+</section><!-- SEO CONTENT --><section class="seo-content"><h2>Free Online Calculators</h2><p>
+Hasbha provides simple and free online calculators for everyday financial and mathematical calculations. Use our tools to calculate loans, monthly payments, credit card repayment, salaries, percentages, age, currencies, discounts, percentage changes and savings.
+</p><h3>Loan and Monthly Payment Calculator</h3><p>
+Use the loan calculator to estimate your monthly payment, total repayment and total interest. Enter the loan amount, annual interest rate and loan term to get an estimated payment and repayment schedule.
+</p><h3>Credit Card Calculator</h3><p>
+Estimate how many months it may take to pay off a credit card balance based on the outstanding balance, interest rate and fixed monthly payment.
+</p><h3>Percentage Calculator</h3><p>
+Calculate percentages quickly for everyday calculations, financial planning, discounts and other mathematical needs.
+</p><h3>Salary Calculator</h3><p>
+Calculate your net salary after deductions and find out how much of your gross salary is being deducted.
+</p><h3>Age Calculator</h3><p>
+Calculate your age in years, months and days by entering your date of birth.
+</p><h3>Currency Converter</h3><p>
+Convert between Jordanian Dinar, US Dollar, Euro, Saudi Riyal, UAE Dirham, Qatari Riyal, Kuwaiti Dinar and British Pound using approximate exchange rates.
+</p><h3>Discount Calculator</h3><p>
+Calculate the discount amount and final price after a percentage discount.
+</p><h3>Basic Calculator</h3><p>
+Perform basic arithmetic operations including addition, subtraction, multiplication and division.
+</p><h3>Percentage Change Calculator</h3><p>
+Calculate the percentage increase or decrease between an original value and a new value.
+</p><h3>Savings Calculator</h3><p>
+Estimate how much you can save over a selected period based on your current savings and monthly contribution.
+</p><p class="note">
+Calculator results are estimates. Financial results may differ from actual bank, credit card or financial institution calculations because of fees, terms and different calculation methods.
+</p></section></div><footer>
+© 2026 Hasbha — Free Online Calculators
+</footer><script>
+
+/* Open calculator */
+
+function openCalc(id){
+
+document.querySelectorAll('.calculator').forEach(function(x){
+x.classList.remove('active');
+});
+
+document.getElementById(id).classList.add('active');
+
+document.getElementById(id).scrollIntoView({
+behavior:'smooth',
+block:'start'
+});
+
+}
+
+/* Close calculators */
+
+function closeCalc(){
+
+document.querySelectorAll('.calculator').forEach(function(x){
+x.classList.remove('active');
+});
+
+window.scrollTo({
+top:0,
+behavior:'smooth'
+});
+
+}
+
+/* Search */
+
+function searchCalculators(){
+
+let text=document.getElementById('search').value.trim().toLowerCase();
+
+let cards=document.querySelectorAll('.card');
+
+let found=false;
+
+cards.forEach(function(card){
+
+let name=card.getAttribute('data-name').toLowerCase();
+
+if(text==='' || name.includes(text)){
+
+card.classList.remove('hidden');
+found=true;
+
+}else{
+
+card.classList.add('hidden');
+
+}
+
+});
+
+document.getElementById('noResults').style.display=
+found?'none':'block';
+
+if(text===''){
+closeCalc();
+return;
+}
+
+if(
+text.includes('loan') ||
+text.includes('payment') ||
+text.includes('finance') ||
+text.includes('mortgage')
+){
+
+openCalc('loan');
+
+}
+
+else if(
+text.includes('credit') ||
+text.includes('card')
+){
+
+openCalc('card');
+
+}
+
+else if(
+text.includes('percent')
+){
+
+openCalc('percentage');
+
+}
+
+else if(
+text.includes('salary') ||
+text.includes('income')
+){
+
+openCalc('salary');
+
+}
+
+else if(
+text.includes('age') ||
+text.includes('birthday') ||
+text.includes('birth')
+){
+
+openCalc('age');
+
+}
+
+else if(
+text.includes('currency') ||
+text.includes('dollar') ||
+text.includes('euro') ||
+text.includes('dinar') ||
+text.includes('exchange')
+){
+
+openCalc('currency');
+
+}
+
+else if(
+text.includes('discount') ||
+text.includes('price')
+){
+
+openCalc('discount');
+
+}
+
+else if(
+text.includes('addition') ||
+text.includes('subtraction') ||
+text.includes('multiplication') ||
+text.includes('division')
+){
+
+openCalc('basic');
+
+}
+
+else if(
+text.includes('increase') ||
+text.includes('decrease') ||
+text.includes('change')
+){
+
+openCalc('change');
+
+}
+
+else if(
+text.includes('saving') ||
+text.includes('savings')
+){
+
+openCalc('saving');
+
+}
+
+}
+
+/* Loan */
+
+function calculateLoan(){
+
+let P=Number(document.getElementById('loanAmount').value);
+let annual=Number(document.getElementById('loanRate').value);
+let months=Number(document.getElementById('loanMonths').value);
+
+let result=document.getElementById('loanResult');
+
+if(P<=0 || annual<0 || months<=0){
+
+result.innerHTML='⚠️ Please enter valid information.';
+return;
+
+}
+
+let r=annual/100/12;
+
+let payment;
+
+if(r===0){
+
+payment=P/months;
+
+}else{
+
+payment=P*r*Math.pow(1+r,months)/
+(Math.pow(1+r,months)-1);
+
+}
+
+let total=payment*months;
+let interest=total-P;
+
+result.innerHTML=
+'Monthly payment:<br><strong>'+
+payment.toFixed(2)+'</strong><br><br>'+
+'Total repayment: '+total.toFixed(2)+'<br>'+
+'Total interest: '+interest.toFixed(2);
+
+let balance=P;
+
+let html=
+'<tr><th>Payment</th><th>Monthly Payment</th><th>Interest</th><th>Principal</th><th>Balance</th></tr>';
+
+let rows=Math.min(months,120);
+
+for(let i=1;i<=rows;i++){
+
+let interestPart=balance*r;
+let principalPart=payment-interestPart;
+
+balance-=principalPart;
+
+if(balance<0) balance=0;
+
+html+=
+'<tr>'+
+'<td>'+i+'</td>'+
+'<td>'+payment.toFixed(2)+'</td>'+
+'<td>'+interestPart.toFixed(2)+'</td>'+
+'<td>'+principalPart.toFixed(2)+'</td>'+
+'<td>'+balance.toFixed(2)+'</td>'+
+'</tr>';
+
+}
+
+if(months>120){
+
+html+=
+'<tr><td colspan="5">Only the first 120 payments are displayed.</td></tr>';
+
+}
+
+document.getElementById('loanTable').innerHTML=html;
+
+}
+
+/* Credit Card */
+
+function calculateCard(){
+
+let balance=Number(document.getElementById('cardBalance').value);
+let annual=Number(document.getElementById('cardRate').value);
+let payment=Number(document.getElementById('cardPayment').value);
+
+let result=document.getElementById('cardResult');
+
+if(balance<=0 || annual<0 || payment<=0){
+
+result.innerHTML='⚠️ Please enter valid information.';
+return;
+
+}
+
+let monthlyRate=annual/100/12;
+
+if(monthlyRate>0 && payment<=balance*monthlyRate){
+
+result.innerHTML=
+'⚠️ The monthly payment is not enough to cover the monthly interest.';
+return;
+
+}
+
+let current=balance;
+let months=0;
+let interestTotal=0;
+
+while(current>0 && months<1200){
+
+let interest=current*monthlyRate;
+
+interestTotal+=interest;
+
+current=current+interest-payment;
+
+months++;
+
+}
+
+if(months>=1200){
+
+result.innerHTML='⚠️ The repayment period is too long with this payment.';
+return;
+
+}
+
+result.innerHTML=
+'Estimated repayment period:<br>'+
+'<strong>'+months+' months</strong><br><br>'+
+'Estimated total interest: '+
+interestTotal.toFixed(2);
+
+}
+
+/* Percentage */
+
+function calculatePercentage(){
+
+let number=Number(document.getElementById('percentNumber').value);
+let percent=Number(document.getElementById('percentValue').value);
+
+if(number<0 || percent<0){
+
+document.getElementById('percentageResult').innerHTML=
+'⚠️ Please check the information.';
+
+return;
+
+}
+
+let answer=number*percent/100;
+
+document.getElementById('percentageResult').innerHTML=
+percent+'% of '+number+' equals:<br>'+
+'<strong>'+answer.toFixed(2)+'</strong>';
+
+}
+
+/* Salary */
+
+function calculateSalary(){
+
+let gross=Number(document.getElementById('grossSalary').value);
+let deductions=Number(document.getElementById('salaryDeductions').value);
+
+if(gross<0 || deductions<0 || deductions>gross){
+
+document.getElementById('salaryResult').innerHTML=
+'⚠️ Deductions cannot exceed the gross salary.';
+
+return;
+
+}
+
+let net=gross-deductions;
+
+let percent=gross===0?0:(deductions/gross)*100;
+
+document.getElementById('salaryResult').innerHTML=
+'Net salary:<br>'+
+'<strong>'+net.toFixed(2)+'</strong><br><br>'+
+'Total deductions: '+deductions.toFixed(2)+'<br>'+
+'Deduction percentage: '+percent.toFixed(2)+'%';
+
+}
+
+/* Age */
+
+function calculateAge(){
+
+let value=document.getElementById('birthDate').value;
+
+let result=document.getElementById('ageResult');
+
+if(!value){
+
+result.innerHTML='⚠️ Please select your date of birth.';
+return;
+
+}
+
+let birth=new Date(value+'T00:00:00');
+let today=new Date();
+
+if(birth>today){
+
+result.innerHTML='⚠️ Date of birth cannot be in the future.';
+return;
+
+}
+
+let years=today.getFullYear()-birth.getFullYear();
+let months=today.getMonth()-birth.getMonth();
+let days=today.getDate()-birth.getDate();
+
+if(days<0){
+
+months--;
+
+let previous=new Date(
+today.getFullYear(),
+today.getMonth(),
+0
+);
+
+days+=previous.getDate();
+
+}
+
+if(months<0){
+
+years--;
+months+=12;
+
+}
+
+result.innerHTML=
+'Your age is:<br>'+
+'<strong>'+years+' years</strong><br>'+
+months+' months and '+days+' days';
+
+}
+
+/* Approximate currency rates */
+
+const rates={
+JOD:1,
+USD:1.410,
+EUR:1.515,
+SAR:5.29,
+AED:5.18,
+QAR:5.13,
+KWD:0.433,
+GBP:1.08
+};
+
+/* Currency */
+
+function convertCurrency(){
+
+let amount=Number(document.getElementById('currencyAmount').value);
+
+let from=document.getElementById('currencyFrom').value;
+
+let to=document.getElementById('currencyTo').value;
+
+if(amount<0){
+
+document.getElementById('currencyResult').innerHTML=
+'⚠️ Please enter a valid amount.';
+
+return;
+
+}
+
+let jodValue=amount/rates[from];
+
+let converted=jodValue*rates[to];
+
+document.getElementById('currencyResult').innerHTML=
+amount.toFixed(2)+' '+from+' is approximately:<br>'+
+'<strong>'+converted.toFixed(2)+' '+to+'</strong>';
+
+}
+
+/* Discount */
+
+function calculateDiscount(){
+
+let price=Number(document.getElementById('originalPrice').value);
+
+let percent=Number(document.getElementById('discountPercent').value);
+
+if(price<0 || percent<0){
+
+document.getElementById('discountResult').innerHTML=
+'⚠️ Please check the information.';
+
+return;
+
+}
+
+let discount=price*percent/100;
+
+let finalPrice=price-discount;
+
+document.getElementById('discountResult').innerHTML=
+'Discount amount:<br>'+
+'<strong>'+discount.toFixed(2)+'</strong><br><br>'+
+'Final price:<br>'+
+'<strong>'+finalPrice.toFixed(2)+'</strong>';
+
+}
+
+/* Basic Calculator */
+
+function calculateBasic(){
+
+let a=Number(document.getElementById('basicA').value);
+
+let b=Number(document.getElementById('basicB').value);
+
+let op=document.getElementById('basicOperation').value;
+
+let answer;
+
+if(op==='+') answer=a+b;
+
+if(op==='-') answer=a-b;
+
+if(op==='*') answer=a*b;
+
+if(op==='/' && b===0){
+
+document.getElementById('basicResult').innerHTML=
+'⚠️ Division by zero is not allowed.';
+
+return;
+
+}
+
+if(op==='/') answer=a/b;
+
+document.getElementById('basicResult').innerHTML=
+'Result:<br><strong>'+answer+'</strong>';
+
+}
+
+/* Percentage Change */
+
+function calculateChange(){
+
+let oldValue=Number(document.getElementById('oldValue').value);
+
+let newValue=Number(document.getElementById('newValue').value);
+
+if(oldValue===0){
+
+document.getElementById('changeResult').innerHTML=
+'⚠️ The old value cannot be zero.';
+
+return;
+
+}
+
+let change=((newValue-oldValue)/Math.abs(oldValue))*100;
+
+let word=change>=0?'Increase':'Decrease';
+
+document.getElementById('changeResult').innerHTML=
+'Percentage change:<br>'+
+'<strong>'+Math.abs(change).toFixed(2)+'%</strong><br><br>'+
+'Result: '+word;
+
+}
+
+/* Savings */
+
+function calculateSaving(){
+
+let start=Number(document.getElementById('savingStart').value);
+
+let monthly=Number(document.getElementById('savingMonthly').value);
+
+let months=Number(document.getElementById('savingMonths').value);
+
+if(start<0 || monthly<0 || months<=0){
+
+document.getElementById('savingResult').innerHTML=
+'⚠️ Please check the information.';
+
+return;
+
+}
+
+let total=start+(monthly*months);
+
+document.getElementById('savingResult').innerHTML=
+'Expected savings:<br>'+
+'<strong>'+total.toFixed(2)+'</strong><br><br>'+
+'Total monthly contributions: '+
+(monthly*months).toFixed(2);
+
+}
+
+</script></body>
+</html>
