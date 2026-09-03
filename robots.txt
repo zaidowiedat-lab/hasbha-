@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://zaidowiedat-lab.github.io/hasbha-/sitemap.xml
